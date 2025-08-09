@@ -16,7 +16,7 @@ public class CatTest {
     Feline feline;
 
     @Test
-    public void getSoundTestCat() {
+    public void getSoundCatTest() {
         Cat cat = new Cat(feline);
         String result = "Мяу";
         assertEquals(result, cat.getSound(), "Кошка может говорить только мяу");

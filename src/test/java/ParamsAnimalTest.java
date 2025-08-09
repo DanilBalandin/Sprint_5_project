@@ -21,21 +21,21 @@ public class ParamsAnimalTest {
     }
 
     @Parameterized.Parameters
-    public static Object[][] getTypeOfFoodForAmimal() {
+    public static Object[][] getTypeOfFoodForAmimalTest() {
         return new Object[][]{
                 {"Травоядное", List.of("Трава", "Различные растения")},
                 {"Хищник", List.of("Животные", "Птицы", "Рыба")},
         };
     }
     @Test
-    public void getFoodForHerbivoreCorrectValue() throws Exception {
+    public void getFoodForHerbivoreCorrectValueTest() throws Exception {
         List<String> actualType = animal.getFood(typeOfAnimal);
 
         assertEquals(expectedTypeOfFood, actualType, "Метод getFood возвращает неправильное значение");
     }
 
     @Test
-    public void getFoodException() {
+    public void getFoodExceptionTest() {
         String invalidAnimalKind = "Всеядное";
         String expectedMessage = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
 
@@ -49,7 +49,7 @@ public class ParamsAnimalTest {
     }
 
     @Test
-    public void getFamilyCorrectValue(){
+    public void getFamilyCorrectValueTest(){
         String expectedFamily = "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи";
         String actualFamily = animal.getFamily();
 

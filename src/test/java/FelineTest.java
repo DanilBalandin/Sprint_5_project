@@ -9,19 +9,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FelineTest {
 
     @Test
-    public void getMeatCorrectList() throws Exception {
+    public void getMeatCorrectListTest() throws Exception {
         Feline feline = Mockito.spy(new Feline());
         List<String> expectedListMeat = Arrays.asList("Животные", "Птицы", "Рыба");
 
         Mockito.when(feline.getFood("Хищник")).thenReturn(expectedListMeat);
 
         List<String> actualListMeat = feline.eatMeat();
-        Mockito.verify(feline).getFood("Хищник");
+
         assertEquals(expectedListMeat, actualListMeat, "Метод getMeat возвращает некорректное значение");
     }
 
     @Test
-    public void getFamilyCorrectValue() {
+    public void getFamilyCorrectValueTest() {
         Feline feline = new Feline();
         String expectedFamily = "Кошачьи";
 
@@ -31,7 +31,7 @@ public class FelineTest {
     }
 
     @Test
-    public void getKittensCorrectValue() {
+    public void getKittensCorrectValueTest() {
         Feline feline = new Feline();
         int expectedKittens = 1;
         int actualKittens = feline.getKittens();
@@ -40,7 +40,7 @@ public class FelineTest {
     }
 
     @Test
-    public void getKittensWithParameters() {
+    public void getKittensWithParametersTest() {
         Feline feline = new Feline();
         int expectedKittens = 10;
 

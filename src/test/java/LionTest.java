@@ -35,7 +35,7 @@ public class LionTest {
     }
 
     @Test
-    public void exceptionSex(){
+    public void exceptionSexTest(){
         Exception exception = assertThrows(Exception.class, () -> new Lion("Альфа-самец", feline));
         String expectedException = "Используйте допустимые значения пола животного - самец или самка";
         assertEquals(expectedException, exception.getMessage());
